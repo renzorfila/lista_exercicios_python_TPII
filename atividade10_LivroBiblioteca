@@ -1,0 +1,19 @@
+class LivroBiblioteca:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponivel = True
+
+    def emprestar(self):
+        if self.disponivel:
+            self.disponivel = False
+            print(f"Empréstimo realizado: '{self.titulo}' de {self.autor}.")
+        else:
+            print(f"Indisponível: '{self.titulo}' já está emprestado.")
+
+
+if __name__ == "__main__":
+    livro = LivroBiblioteca("Dom Casmurro", "Machado de Assis")
+
+    livro.emprestar()
+    livro.emprestar()
